@@ -1,0 +1,165 @@
+{% extends 'RUser/Header.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        .style7 {color: #FFFF00}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF DRUG RESPONSE !!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1122" align="center">
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter trans_date</div></td>
+                                    <td><input type="text" name="trans_date"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter cc_num</div></td>
+                                    <td><input type="text" name="cc_num"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter category</div></td>
+                                    <td><input type="text" name="category"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter AMT_TRANS</div></td>
+                                    <td><input type="text" name="AMT_TRANS"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter first</div></td>
+                                    <td><input type="text" name="first"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter last</div></td>
+                                    <td><input type="text" name="last"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter gender</div></td>
+                                    <td><select name="gender">
+                                      <option>---Select---</option>
+                                      <option>M</option>
+                                      <option>F</option>
+                                    </select>
+                                    </td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter street</div></td>
+                                    <td><input type="text" name="street"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter city</div></td>
+                                    <td><input type="text" name="city"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter state</div></td>
+                                    <td><input type="text" name="state"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter zip</div></td>
+                                    <td><input type="text" name="zip"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter User_Lat</div></td>
+                                    <td><input type="text" name="User_Lat"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter User_Long</div>
+                                    </div></td>
+                                    <td><input type="text" name="User_Long"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter city_pop</div></td>
+                                    <td><input type="text" name="city_pop"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">
+                                      <div align="center">Enter Job</div>
+                                    </div></td>
+                                    <td><input type="text" name="Job"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter Dob</div></td>
+                                    <td><input type="text" name="Dob"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style4">Enter  trans_num</div></td>
+                                    <td><input type="text" name="trans_num"></td>
+                                    <td bgcolor="#FF0000"><div align="center" class="style7">Enter merch_lat</div></td>
+                                    <td><input type="text" name="merch_lat"></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="287" height="44" bgcolor="#FF0000"><div align="center" class="style4"><span class="style2">Enter </span>merch_long</div></td>
+                                    <td width="269"><input type="text" name="merch_long"></td>
+                                    <td width="269"><input name="submit" type="submit" class="style1" value="Predict"></td>
+                                    <td width="269">&nbsp;</td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table width="866" height="94" border="0" align="center" >
+                                    <tr><td width="588" bgcolor="#FF0000"><div align="center"><span class="style6">PREDICTION OF CREDIT CARD FRAUD DETECTION TYPE </span>:: </div></td>
+
+
+
+                                      <td width="268" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{objs}}</div></td></tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
